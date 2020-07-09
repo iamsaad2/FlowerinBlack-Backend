@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const { check, validationResult } = require('express-validator');
-
 const Flower = require('../models/Flower');
 
 // @route   POST api/flowers
@@ -11,13 +9,8 @@ const Flower = require('../models/Flower');
 
 router.post(
   '/',
-  [check('name', 'Please add a name').not().isEmpty()],
-  async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
 
+  async (req, res) => {
     const {
       name,
       water,

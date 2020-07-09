@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
   res.send('works');
 });
 //Define Routes
-app.use('/api/profiles', require('./routes/profiles'));
 app.use('/api/flowers', require('./routes/flowers'));
 app.use('/api/managers', require('./routes/managers'));
 app.use('/api/auth', require('./routes/auth'));
