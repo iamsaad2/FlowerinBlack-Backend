@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const cors = require('../middleware/cors');
+
 const Flower = require('../models/Flower');
 
 // @route   POST api/flowers
@@ -65,7 +67,7 @@ router.post(
 // @route   GET api/flowers
 // @desc    Get all flowers
 // @access   Public
-router.get('/', async (req, res) => {
+router.get('/', cors, async (req, res) => {
   try {
     const flowers = await Flower.find();
     res.json(flowers);
