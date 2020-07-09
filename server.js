@@ -12,6 +12,9 @@ app.use(express.json({ extended: false }));
 
 const PORT = process.env.local || 5000;
 
+app.get('/', (req, res) => {
+  res.send('works');
+});
 //Define Routes
 app.use('/api/profiles', require('./routes/profiles'));
 app.use('/api/flowers', require('./routes/flowers'));
