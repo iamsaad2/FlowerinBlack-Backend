@@ -92,7 +92,7 @@ router.delete('/:id', async (req, res) => {
 // @route   PUT api/flowers/:id
 // @desc    Update existing Flowers
 //@access   Public
-router.put('/:id', auth, async (req, res) => {
+router.put('/:id', async (req, res) => {
   const {
     name,
     water,
