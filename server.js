@@ -14,7 +14,7 @@ app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
-  res.send('this works');
+  res.send('this workss');
 });
 //Define Routes
 app.use('/api/flowers', require('./routes/flowers'));
